@@ -1,11 +1,14 @@
+using RecipeScraper;
+
 namespace WoksOfLIfeRecipeGetterTest
 {
     [TestClass]
-    public class UnitTest1
+    public class FormatRecipeTest
     {
         [TestMethod]
         public void TestMethod1()
         {
+            
         }
     }
 }

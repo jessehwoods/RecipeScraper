@@ -1,7 +1,7 @@
 namespace WoksOfLIfeRecipeGetterTest
 {
     [TestClass]
-    public class UnitTest1
+    public class GetRecipeTest
     {
         [TestMethod]
         public void TestMethod1()

@@ -1,4 +1,8 @@
-﻿using System.Net;
+﻿using RecipeScraper;
+using System.Net;
+using System.Runtime.CompilerServices;
+
+[assembly:InternalsVisibleTo("WoksOfLIfeRecipeGetterTest")]
 
 namespace RecipeScraper
 {
@@ -11,9 +15,9 @@ namespace RecipeScraper
     public class WoksOfLIfeRecipeGetter
     {
         /// <summary>
-        /// The beginning of the url for any acceptable urls to be accessed.
+        /// The beginning of the url for any acceptable URLSs to be accessed.
         /// </summary>
-        static readonly string targetSite = "https://thewoksoflife.com/";
+        private readonly string targetSite = "https://thewoksoflife.com/";
 
         /// <summary>
         /// Takes in a url, stips extraneous data, formats it, and gives it back as an html string.
@@ -21,7 +25,7 @@ namespace RecipeScraper
         /// <param name="url"></param>
         /// The URL of the recipe to be returned. Must be from the site <see href = "https://thewoksoflife.com/">The Woks Of Life</see>.
         /// <returns>A JSON representation of the recipe.</returns>
-        public static string GetRecipe(string url)
+        public string GetRecipe(string url)
         {
             // Make sure the url is going to the right website
             if (!url.StartsWith(targetSite))
@@ -47,7 +51,7 @@ namespace RecipeScraper
         /// </summary>
         /// <param name="html">A string of formatted html to be examined.</param>
         /// <returns>True if the provided string is not empty, and is formatted in the style of the target site.</returns>
-        protected static bool IsRecipe(string html)
+        internal bool IsRecipe(string html)
         {
             throw new NotImplementedException();
         }
@@ -57,7 +61,7 @@ namespace RecipeScraper
         /// </summary>
         /// <param name="recipeText"></param>
         /// <returns>A JSON string representing the recipe.</returns>
-        protected static string FormatRecipe(string recipeText)
+        internal string FormatRecipe(string recipeText)
         {
             throw new NotImplementedException();
         }
