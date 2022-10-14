@@ -14,6 +14,7 @@ The format of the JSON to be output is as follows:
     "steps": [
         STRING
     ],
-    "imageURL": STRING,
+    "prepTime": STRING,
+    "cookingTime: STRING,
     "pageURL": STRING
 }
