@@ -42,6 +42,18 @@ namespace WoksOfLIfeRecipeGetterTest
         }
 
         /// <summary>
+        /// Tests with the file "valid4.html".
+        /// </summary>
+        /// <remarks>This is a a recipe titled "KUNG PAO BEEF"</remarks>
+        [TestMethod]
+        public void TestValid4()
+        {
+            var getter = new WoksOfLIfeRecipeGetter();
+            var html = System.IO.File.ReadAllText("../../../../WoksOfLIfeRecipeGetterTest/test-files/valid4.html");
+            Assert.IsTrue(getter.IsRecipe(html));
+        }
+
+        /// <summary>
         /// Tests with the file "invalid1.html".
         /// </summary>
         /// <remarks>This is a the main page of The Woks of Life, so not a recipe</remarks>
